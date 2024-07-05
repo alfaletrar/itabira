@@ -1,0 +1,150 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 20px;
+    min-height: 70px;
+}
+
+header h1 {
+    float: left;
+}
+
+header nav {
+    float: right;
+    margin-top: 25px;
+}
+
+header ul {
+    list-style: none;
+}
+
+header ul li {
+    float: left;
+    margin-right: 20px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: #f4f4f4;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Estilo específico para links no menu */
+nav a {
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #f4f4f4;
+}
+/*----------------------------------------------------*/
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+#gallery-item {
+    width: 50%;
+    margin: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; 
+}
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+}
+.close {
+   color: #fff;
+   font-size: 30px;
+   font-weight: bold;
+   position: absolute;
+   top: 10px;
+   right: 20px;
+   cursor: pointer;
+}
+
+  img {
+    /* Ajusta a imagem para ocupar toda a tela */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* Remove espaço extra */
+    display: block;
+  }
+  
+ /* Estilo para a imagem */
+    .icone {
+      width: 70px; /* Largura desejada */
+      height: 60px; /* Altura desejada */
+    }

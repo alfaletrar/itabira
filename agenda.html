@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos</title>
+<style>
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header{
+    background: #333;
+    color: #fff;
+    padding-top: 20px;
+    min-height: 70px;
+}
+
+header h1 {
+    float: left;
+}
+
+header nav {
+    float: right;
+    margin-top: 25px;
+}
+
+header ul {
+    list-style: none;
+}
+
+header ul li {
+    float: left;
+    margin-right: 20px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: #f4f4f4;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+  table {
+    width: 60%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: 20%;
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 5px;
+    height: 20px;
+    text-align: center;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  .highlight {
+    background-color: #ffc;
+    font-weight: bold;
+  }
+    .indice {
+      position: fixed;
+      top: 100px; /* Ajuste a posição vertical conforme necessário */
+      right: 20px; /* Ajuste a posição horizontal conforme necessário */
+      background-color: #f8f9fa;
+      border: 1px solid #ccc;
+      padding: 10px;
+      max-height: calc(100vh - 40px); /* Limita a altura máxima do índice */
+      overflow-y: auto; /* Adiciona barra de rolagem quando necessário */
+    }
+    .indice ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .indice li {
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 20px; /* Espaço para o quadrado colorido */
+    }
+    .indice li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 10px;
+      border: 2px solid #555;
+    }
+
+    /* Definições de cores para cada item */
+    .indice li.item1::before {
+      background-color: #ffc; /* Cor para o item 1 */
+    }
+    .indice li.item2::before {
+      background-color: #28a745; /* Cor para o item 2 */
+    }
+    .indice li.item3::before {
+      background-color: #dc3545; /* Cor para o item 3 */
+    }
+</style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Agenda de Formações</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="agenda.html">Agenda</a></li>
+                    <li><a href="material.html">Formações</a></li>
+                    <li><a href="galeria.html">Galeria de Fotos</a></li>
+                    <li><a href="links.html">Sites Sugeridos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div>
+<table>
+  <thead>
+    <tr>
+      <th colspan="7">Janeiro</th>
+    </tr>
+    <tr>
+      <th>Domingo</th>
+      <th>Segunda</th>
+      <th>Terça</th>
+      <th>Quarta</th>
+      <th>Quinta</th>
+      <th>Sexta</th>
+      <th>Sábado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td></td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+      <td>10</td>
+      <td>11</td>
+      <td>12</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>15</td>
+      <td>16</td>
+      <td>17</td>
+      <td>18</td>
+      <td>19</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>22</td>
+      <td>23</td>
+      <td>24</td>
+      <td>25</td>
+      <td>26</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td>29</td>
+      <td>30</td>
+      <td>31</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Fevereiro -->
+<table>
+  <thead>
+    <tr>
+      <th colspan="7">Fevereiro</th>
+    </tr>
+    <tr>
+      <th>Domingo</th>
+      <th>Segunda</th>
+      <th>Terça</th>
+      <th>Quarta</th>
+      <th>Quinta</th>
+      <th>Sexta</th>
+      <th>Sábado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>12</td>
+      <td>13</td>
+      <td>14</td>
+      <td>15</td>
+      <td>16</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>19</td>
+      <td>20</td>
+      <td>21</td>
+      <td>22</td>
+      <td>23</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>26</td>
+      <td>27</td>
+      <td>28</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Março -->
+<table>
+  <thead>
+    <tr>
+      <th colspan="7">Março</th>
+    </tr>
+    <tr>
+      <th>Domingo</th>
+      <th>Segunda</th>
+      <th>Terça</th>
+      <th>Quarta</th>
+      <th>Quinta</th>
+      <th>Sexta</th>
+      <th>Sábado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>11</td>
+      <td>12</td>
+      <td>13</td>
+      <td>14</td>
+      <td>15</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>18</td>
+      <td>19</td>
+      <td>20</td>
+      <td>21</td>
+      <td>22</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>25</td>
+      <td>26</td>
+      <td>27</td>
+      <td>28</td>
+      <td>29</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td>31</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Abril -->
+<table>
+  <thead>
+    <tr>
+      <th colspan="7">Abril</th>
+    </tr>
+    <tr>
+      <th>Domingo</th>
+      <th>Segunda</th>
+      <th>Terça</th>
+      <th>Quarta</th>
+      <th>Quinta</th>
+      <th>Sexta</th>
+      <th>Sábado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td></td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+      <td>10</td>
+      <td>11</td>
+      <td>12</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>15</td>
+      <td>16</td>
+      <td>17</td>
+      <td>18</td>
+      <td>19</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>22</td>
+      <td>23</td>
+      <td>24</td>
+      <td>25</td>
+      <td>26</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td>29</td>
+      <td>30</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Maio -->
+<table>
+  <thead>
+    <tr>
+      <th colspan="7">Maio</th>
+    </tr>
+    <tr>
+      <th>Domingo</th>
+      <th>Segunda</th>
+      <th>Terça</th>
+      <th>Quarta</th>
+      <th>Quinta</th>
+      <th>Sexta</th>
+      <th>Sábado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+      <td>10</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>13</td>
+      <td>14</td>
+      <td>15</td>
+      <td>16</td>
+      <td>17</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>20</td>
+      <td>21</td>
+      <td>22</td>
+      <td>23</td>
+      <td>24</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td>27</td>
+      <td>28</td>
+      <td>29</td>
+      <td>30</td>
+      <td>31</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Junho -->
+<table>
+  <thead>
+    <tr>
+      <th colspan="7">Junho</th>
+    </tr>
+    <tr>
+      <th>Domingo</th>
+      <th>Segunda</th>
+      <th>Terça</th>
+      <th>Quarta</th>
+      <th>Quinta</th>
+      <th>Sexta</th>
+      <th>Sábado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td class="highlight">10</td>
+      <td class="highlight">11</td>
+      <td class="highlight">12</td>
+      <td>13</td>
+      <td>14</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td class="highlight">17</td>
+      <td class="highlight">18</td>
+      <td class="highlight">19</td>
+      <td>20</td>
+      <td>21</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>24</td>
+      <td>25</td>
+      <td>26</td>
+      <td>27</td>
+      <td>28</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+<!-- Julho -->
+<table>
+  <thead>
+    <tr>
+      <th colspan="7">Julho</th>
+    </tr>
+    <tr>
+      <th>Domingo</th>
+      <th>Segunda</th>
+      <th>Terça</th>
+      <th>Quarta</th>
+      <th>Quinta</th>
+      <th>Sexta</th>
+      <th>Sábado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td></td>
+      <td class="highlight">1</td>
+      <td class="highlight">2</td>
+      <td class="highlight">3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td class="highlight">8</td>
+      <td class="highlight">9</td>
+      <td class="highlight">10</td>
+      <td>11</td>
+      <td>12</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>15</td>
+      <td>16</td>
+      <td>17</td>
+      <td>18</td>
+      <td>19</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>22</td>
+      <td>23</td>
+      <td>24</td>
+      <td>25</td>
+      <td>26</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td>29</td>
+      <td>30</td>
+      <td>31</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Agosto -->
+<table>
+  <thead>
+    <tr>
+      <th colspan="7">Agosto</th>
+    </tr>
+    <tr>
+      <th>Domingo</th>
+      <th>Segunda</th>
+      <th>Terça</th>
+      <th>Quarta</th>
+      <th>Quinta</th>
+      <th>Sexta</th>
+      <th>Sábado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td class="highlight">5</td>
+      <td class="highlight">6</td>
+      <td class="highlight">7</td>
+      <td>8</td>
+      <td>9</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td class="highlight">12</td>
+      <td class="highlight">13</td>
+      <td class="highlight">14</td>
+      <td>15</td>
+      <td>16</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td class="highlight">19</td>
+      <td class="highlight">20</td>
+      <td class="highlight">21</td>
+      <td>22</td>
+      <td>23</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td class="highlight">26</td>
+      <td class="highlight">27</td>
+      <td class="highlight">28</td>
+      <td>29</td>
+      <td>30</td>
+      <td>31</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Setembro -->
+<table>
+  <thead>
+    <tr>
+      <th colspan="7">Setembro</th>
+    </tr>
+    <tr>
+      <th>Domingo</th>
+      <th>Segunda</th>
+      <th>Terça</th>
+      <th>Quarta</th>
+      <th>Quinta</th>
+      <th>Sexta</th>
+      <th>Sábado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td class="highlight">2</td>
+      <td class="highlight">3</td>
+      <td class="highlight">4</td>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td class="highlight">9</td>
+      <td class="highlight">10</td>
+      <td class="highlight">11</td>
+      <td>12</td>
+      <td>13</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td class="highlight">16</td>
+      <td class="highlight">17</td>
+      <td class="highlight">18</td>
+      <td>19</td>
+      <td>20</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td class="highlight">23</td>
+      <td class="highlight">24</td>
+      <td class="highlight">25</td>
+      <td>26</td>
+      <td>27</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td>30</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Outubro -->
+<table>
+  <thead>
+    <tr>
+      <th colspan="7">Outubro</th>
+    </tr>
+    <tr>
+      <th>Domingo</th>
+      <th>Segunda</th>
+      <th>Terça</th>
+      <th>Quarta</th>
+      <th>Quinta</th>
+      <th>Sexta</th>
+      <th>Sábado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td></td>
+      <td></td>
+      <td>1</td>
+      <td class="highlight">2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+      <td>10</td>
+      <td>11</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>14</td>
+      <td>15</td>
+      <td>16</td>
+      <td>17</td>
+      <td>18</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td class="highlight">21</td>
+      <td class="highlight">22</td>
+      <td class="highlight">23</td>
+      <td>24</td>
+      <td>25</td>
+      <td>26</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td class="highlight">28</td>
+      <td class="highlight">29</td>
+      <td class="highlight">30</td>
+      <td>31</td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Novembro -->
+<table>
+  <thead>
+    <tr>
+      <th colspan="7">Novembro</th>
+    </tr>
+    <tr>
+      <th>Domingo</th>
+      <th>Segunda</th>
+      <th>Terça</th>
+      <th>Quarta</th>
+      <th>Quinta</th>
+      <th>Sexta</th>
+      <th>Sábado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td class="highlight">4</td>
+      <td class="highlight">5</td>
+      <td class="highlight">6</td>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td class="highlight">11</td>
+      <td class="highlight">12</td>
+      <td class="highlight">13</td>
+      <td>14</td>
+      <td>15</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td class="highlight">18</td>
+      <td class="highlight">19</td>
+      <td>20</td>
+      <td class="highlight">21</td>
+      <td>22</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td class="highlight">25</td>
+      <td class="highlight">26</td>
+      <td class="highlight">27</td>
+      <td>28</td>
+      <td>29</td>
+      <td>30</td>
+    </tr>
+  </tbody>
+</table>
+<!-- Dezembro -->
+<table>
+  <thead>
+    <tr>
+      <th colspan="7">Dezembro</th>
+    </tr>
+    <tr>
+      <th>Domingo</th>
+      <th>Segunda</th>
+      <th>Terça</th>
+      <th>Quarta</th>
+      <th>Quinta</th>
+      <th>Sexta</th>
+      <th>Sábado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>9</td>
+      <td>10</td>
+      <td>11</td>
+      <td>12</td>
+      <td>13</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>16</td>
+      <td>17</td>
+      <td>18</td>
+      <td>19</td>
+      <td>20</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>23</td>
+      <td>24</td>
+      <td>25</td>
+      <td>26</td>
+      <td>27</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td>30</td>
+      <td>31</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+  <div class="indice">
+    <ul>
+      <li class="item1"><p>Formação LEEI</p></li>
+      <li class="item2"><p>Item 2</p></li>
+      <li class="item3"><p>Item 3</p></li>
+      <!-- Adicione outros itens conforme necessário -->
+    </ul>
+  </div>
+  <div class="container">
+          <p>&copy; 2024 Educação Infantil - Alfabetização no Tempo Certo</p>
+  </div>
+  <footer>
+        <div class="container">
+            <p>&copy; 2024 Educação Infantil - Alfabetização no Tempo Certo</p>
+        </div>
+  </footer>
+
+</body>
+</html>

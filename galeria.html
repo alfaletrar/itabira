@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos</title>
+<style>
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header{
+    background: #333;
+    color: #fff;
+    padding-top: 20px;
+    min-height: 70px;
+}
+
+header h1 {
+    float: left;
+}
+
+header nav {
+    float: right;
+    margin-top: 25px;
+}
+
+header ul {
+    list-style: none;
+}
+
+header ul li {
+    float: left;
+    margin-right: 20px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: #f4f4f4;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+
+    padding: 20px;
+}
+#gallery-item {
+    width: 25%;
+    margin: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; 
+}
+.gallery-item img {
+    display: flex;
+    width: 80%;
+    height: auto;
+    transition: transform 0.2s ease;
+    padding: 20px;
+    max-width: 100%; /* Imagens não podem ser maiores que o seu contêiner */
+    max-height: 400px; /* Altura máxima para as imagens */
+    object-fit: cover; /* Mantém a proporção e corta se necessário */
+}
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    padding-top: 10%;
+    box-sizing: border-box;
+    overflow: auto;
+}
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+}
+.close {
+   color: #fff;
+   font-size: 30px;
+   font-weight: bold;
+   position: absolute;
+   top: 10px;
+   right: 20px;
+   cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Galeria de Fotos</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="agenda.html">Agenda</a></li>
+                    <li><a href="material.html">Formações</a></li>
+                    <li><a href="galeria.html">Galeria de Fotos</a></li>
+                    <li><a href="links.html">Sites Sugeridos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="gallery">
+        <!-- Miniaturas das fotos -->
+        <div class="gallery-item">
+            <img src="imgs/imagem1.jpeg" alt="Foto 1" onclick="openModal('imgs/imagem1.jpeg')">
+        </div>
+	<br>
+        <div class="gallery-item">
+            <img src="imgs/imagem2.jpeg" alt="Foto 2" onclick="openModal('imgs/imagem2.jpeg')">
+        </div>
+	<br>
+        <div class="gallery-item">
+            <img src="imgs/imagem3.jpeg" alt="Foto 3" onclick="openModal('imgs/imagem3.jpeg')">
+        </div>
+	<br>
+        <div class="gallery-item">
+            <img src="imgs/imagem4.jpeg" alt="Foto 4" onclick="openModal('imgs/imagem3.jpeg')">
+        </div>
+	<br>
+        <div class="gallery-item">
+            <img src="imgs/imagem5.jpeg" alt="Foto 5" onclick="openModal('imgs/imagem5.jpeg')">
+        </div>
+	<br>
+        <!-- Adicione mais divs .gallery-item conforme necessário -->
+    </div>
+
+    <!-- Modal para exibição em tela cheia -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <script>
+        // Função para abrir o modal com a imagem em tela cheia
+        function openModal(imagePath) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("modalImg");
+            modal.style.display = "block";
+            modalImg.src = imagePath;
+        }
+
+        // Função para fechar o modal
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+    </script>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Educação Infantil - Alfabetização no Tempo Certo</p>
+        </div>
+    </footer>
+</body>
+</html>

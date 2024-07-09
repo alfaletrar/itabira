@@ -101,7 +101,7 @@ footer p {
   }
     .indice {
       position: fixed;
-      top: 250px; /* Ajuste a posição vertical conforme necessário */
+      top: 75px; /* Ajuste a posição vertical conforme necessário */
       right: 20px; /* Ajuste a posição horizontal conforme necessário */
       background-color: #f8f9fa;
       border: 1px solid #ccc;
@@ -139,6 +139,46 @@ footer p {
     .indice li.item3::before {
       background-color: #dc3545; /* Cor para o item 3 */
     }
+
+@media screen and (max-width: 1100px) {
+    .indice {
+      position: fixed;
+      top: 150px; /* Ajuste a posição vertical conforme necessário */
+      right: 20px; /* Ajuste a posição horizontal conforme necessário */
+      background-color: #f8f9fa;
+      border: 1px solid #ccc;
+      padding: 10px;
+      max-height: calc(100vh - 40px); /* Limita a altura máxima do índice */
+      overflow-y: auto; /* Adiciona barra de rolagem quando necessário */
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .indice {
+      position: fixed;
+      top: 150px; /* Ajuste a posição vertical conforme necessário */
+      right: 20px; /* Ajuste a posição horizontal conforme necessário */
+      background-color: #f8f9fa;
+      border: 1px solid #ccc;
+      padding: 10px;
+      max-width: 125px; /* Limita a altura máxima do índice */
+      max-height: 75px; /* Limita a altura máxima do índice */
+      overflow-x: auto; /* Adiciona barra de rolagem quando necessário */
+    }
+  table {
+    width: 50%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: 5%;
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 1px;
+    height: 10px;
+    text-align: center;
+  }
+}
+
 </style>
 </head>
 <body>
